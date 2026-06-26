@@ -55,3 +55,14 @@
   - 新增 `DEPLOY_CN.md`，记录 no-code 控制台导入、构建配置和环境变量。
 - 边界：
   - 纯静态 no-code 部署无法安全隐藏 DeepSeek Key；保留数字分身时必须使用平台函数或后端代理。
+
+## CTX-004 终版头像替换
+
+- 时间：2026-06-26
+- 范围：将页面首屏头像和数字分身头像替换为终版照片。
+- 资源：
+  - 来源：`../简历照片/终版照片.jpg`
+  - 站点资源：`assets/avatar.jpg`
+- 改动：
+  - `index.html` 中两个头像引用从 `assets/avatar.png` 改为 `assets/avatar.jpg`。
+  - `FILE_INDEX.md` 同步头像资源来源。

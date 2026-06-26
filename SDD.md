@@ -8,7 +8,7 @@
 - `styles.css`：米色/橄榄视觉系统、响应式布局、动效与状态样式。
 - `app.js`：导航高亮、滚动入场、数字分身对话、调用 `/api/chat`。
 - `api/chat.js`：后端函数，读取 DeepSeek 环境变量并调用模型接口。
-- `assets/avatar.png`：彩色头像资源，来自简历照片目录副本。
+- `assets/avatar.jpg`：彩色头像资源，来自简历照片目录副本。
 
 ## 核心流程
 
