@@ -6,9 +6,11 @@
 - `styles.css`：视觉风格、响应式布局、动效和聊天区域样式。
 - `app.js`：滚动动效、导航高亮、数字分身本地预览回答与 `/api/chat` 调用。
 - `api/chat.js`：Vercel Serverless API，读取 DeepSeek 环境变量并调用模型。
+- `functions/api/chat.js`：EdgeOne Makers/Pages Functions，供国内免 VPN 部署使用。
 - `package.json`：Vercel 本地开发脚本。
 - `.env.example`：DeepSeek 环境变量示例，不包含真实密钥。
 - `.gitignore`：忽略 `.env.local`、`.vercel`、`node_modules`。
+- `DEPLOY_CN.md`：国内免 VPN 部署说明。
 
 ## 资源
 
@@ -42,3 +44,5 @@ DEEPSEEK_API_KEY
 DEEPSEEK_API_URL=https://api.deepseek.com/chat/completions
 DEEPSEEK_MODEL=deepseek-v4-flash
 ```
+
+国内免 VPN 部署参考 `DEPLOY_CN.md`。

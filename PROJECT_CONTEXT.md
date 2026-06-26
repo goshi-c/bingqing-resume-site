@@ -39,3 +39,19 @@
   - API Key 不写入前端代码，不进入仓库文件。
   - 公开部署时应在 Vercel 环境变量中配置真实 Key。
   - `file://` 或普通静态服务器预览时仍使用本地预览回答；正式域名部署后才走真实 DeepSeek 调用。
+
+## CTX-003 国内免 VPN 部署准备
+
+- 时间：2026-06-26
+- 背景：Vercel 版本已可访问，但国内用户可能需要 VPN 或访问不稳定；需要准备一版国内平台可部署版本。
+- 推荐方案：腾讯云 EdgeOne Makers/Pages。
+- 依据：
+  - 支持导入 Git 仓库创建项目。
+  - 支持静态站点和 Serverless 应用。
+  - 支持环境变量。
+- 关键实现：
+  - 新增 `functions/api/chat.js`，按 EdgeOne Makers Functions 的 `onRequestPost(context)` 形式实现 `/api/chat`。
+  - 保留 Vercel 的 `api/chat.js`，同一仓库可同时部署 Vercel 和 EdgeOne。
+  - 新增 `DEPLOY_CN.md`，记录 no-code 控制台导入、构建配置和环境变量。
+- 边界：
+  - 纯静态 no-code 部署无法安全隐藏 DeepSeek Key；保留数字分身时必须使用平台函数或后端代理。
